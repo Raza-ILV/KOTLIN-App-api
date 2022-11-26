@@ -2,7 +2,7 @@ package com.plcoding.retrofitcrashcourse
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,14 +10,9 @@ import com.plcoding.retrofitcrashcourse.databinding.ActivityMainBinding
 import retrofit2.HttpException
 import java.io.IOException
 
-const val TAG = "MainActivity"
-
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
-
     private lateinit var catAdapter: CatAdapter
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -29,18 +24,14 @@ class MainActivity : AppCompatActivity() {
             val response = try {
                 RetrofitInstance.api.getCats()
             } catch(e: IOException) {
-                Log.e(TAG, "IOException, you might not have internet connection")
                 binding.progressBar.isVisible = false
                 return@launchWhenCreated
             } catch (e: HttpException) {
-                Log.e(TAG, "HttpException, unexpected response")
                 binding.progressBar.isVisible = false
                 return@launchWhenCreated
             }
             if(response.isSuccessful && response.body() != null) {
                 catAdapter.cats = response.body()!!
-            } else {
-                Log.e(TAG, "Response not successful")
             }
             binding.progressBar.isVisible = false
         }
