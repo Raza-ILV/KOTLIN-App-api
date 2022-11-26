@@ -1,4 +1,4 @@
-package com.plcoding.retrofitcrashcourse
+package com.myapp.catapp
 
 
 data class Cat(

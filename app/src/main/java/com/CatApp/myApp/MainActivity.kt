@@ -1,4 +1,4 @@
-package com.plcoding.retrofitcrashcourse
+package com.myapp.catapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
