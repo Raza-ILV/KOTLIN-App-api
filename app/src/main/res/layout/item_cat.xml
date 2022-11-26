@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="7dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/teal_700"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/a"/>
+
+    <TextView
+        android:id="@+id/og"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="170dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="OG"
+        android:textColor="@color/a"
+        android:background="@color/teal_700"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="25dp"
+        android:text="Country"
+        android:textColor="@color/a"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+
+</androidx.cardview.widget.CardView>
